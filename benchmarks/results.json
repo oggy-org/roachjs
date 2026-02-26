@@ -13,85 +13,85 @@
   },
   "helloWorld": {
     "roachjs": {
-      "requestsPerSec": 27564.8,
-      "latencyAvg": 0.03,
+      "requestsPerSec": 28463.28,
+      "latencyAvg": 0.02,
       "latencyP99": 0,
-      "throughput": 3996467.2
+      "throughput": 4127092.37
     },
     "fastify": {
-      "requestsPerSec": 16074.19,
+      "requestsPerSec": 15896.8,
       "latencyAvg": 0.03,
       "latencyP99": 1,
-      "throughput": 2828753.46
+      "throughput": 2797772.8
     },
     "express": {
-      "requestsPerSec": 6111.1,
+      "requestsPerSec": 6152.4,
       "latencyAvg": 1.09,
       "latencyP99": 3,
-      "throughput": 1454312.73
+      "throughput": 1464012.8
     }
   },
   "json": {
     "roachjs": {
-      "requestsPerSec": 25875.64,
+      "requestsPerSec": 26569.6,
       "latencyAvg": 0.02,
       "latencyP99": 0,
-      "throughput": 4942196.37
+      "throughput": 5074534.41
     },
     "fastify": {
-      "requestsPerSec": 13492,
+      "requestsPerSec": 13445.46,
       "latencyAvg": 0.02,
       "latencyP99": 1,
-      "throughput": 2995200
+      "throughput": 2984773.82
     },
     "express": {
-      "requestsPerSec": 5919.1,
+      "requestsPerSec": 5906.37,
       "latencyAvg": 1.07,
       "latencyP99": 3,
-      "throughput": 1692811.64
+      "throughput": 1689088
     }
   },
   "paramsBody": {
     "roachjs": {
-      "requestsPerSec": 19049.6,
+      "requestsPerSec": 18717.82,
       "latencyAvg": 0.02,
       "latencyP99": 1,
-      "throughput": 5943705.6
+      "throughput": 5839965.1
     },
     "fastify": {
-      "requestsPerSec": 11295.64,
-      "latencyAvg": 0.04,
+      "requestsPerSec": 11169.1,
+      "latencyAvg": 0.05,
       "latencyP99": 1,
-      "throughput": 2383266.91
+      "throughput": 2356456.73
     },
     "express": {
-      "requestsPerSec": 4646.37,
-      "latencyAvg": 1.99,
+      "requestsPerSec": 4594.28,
+      "latencyAvg": 2.02,
       "latencyP99": 4,
-      "throughput": 1277533.1
+      "throughput": 1263290.19
     }
   },
   "middleware": {
     "roachjs": {
-      "requestsPerSec": 27139.2,
+      "requestsPerSec": 27199.28,
       "latencyAvg": 0.02,
       "latencyP99": 0,
-      "throughput": 3717529.6
+      "throughput": 3725963.64
     },
     "fastify": {
-      "requestsPerSec": 13994.55,
+      "requestsPerSec": 13777.1,
       "latencyAvg": 0.02,
       "latencyP99": 1,
-      "throughput": 2351197.1
+      "throughput": 2314705.46
     },
     "express": {
-      "requestsPerSec": 6003.82,
+      "requestsPerSec": 6008.19,
       "latencyAvg": 1.07,
       "latencyP99": 3,
-      "throughput": 1380770.91
+      "throughput": 1381888
     }
   },
-  "timestamp": "2026-02-26T12:53:00.023Z",
+  "timestamp": "2026-02-26T13:00:00.566Z",
   "logs": [
     "╔══════════════════════════════════════════════╗",
     "║       RoachJS Benchmark Suite                ║",
@@ -107,9 +107,9 @@
     "\n  --- Fastify ---",
     "\n  --- Express ---",
     "\n  Results:",
-    "    roachjs    27,565 req/sec  (avg 0.03ms, p99 0ms)",
-    "    fastify    16,074 req/sec  (avg 0.03ms, p99 1ms)",
-    "    express    6,111 req/sec  (avg 1.09ms, p99 3ms)",
+    "    roachjs    28,463 req/sec  (avg 0.02ms, p99 0ms)",
+    "    fastify    15,897 req/sec  (avg 0.03ms, p99 1ms)",
+    "    express    6,152 req/sec  (avg 1.09ms, p99 3ms)",
     "\n══════════════════════════════════════════════════",
     "  Benchmark 2: JSON Response",
     "══════════════════════════════════════════════════",
@@ -117,9 +117,9 @@
     "\n  --- Fastify ---",
     "\n  --- Express ---",
     "\n  Results:",
-    "    roachjs    25,876 req/sec  (avg 0.02ms, p99 0ms)",
-    "    fastify    13,492 req/sec  (avg 0.02ms, p99 1ms)",
-    "    express    5,919 req/sec  (avg 1.07ms, p99 3ms)",
+    "    roachjs    26,570 req/sec  (avg 0.02ms, p99 0ms)",
+    "    fastify    13,445 req/sec  (avg 0.02ms, p99 1ms)",
+    "    express    5,906 req/sec  (avg 1.07ms, p99 3ms)",
     "\n══════════════════════════════════════════════════",
     "  Benchmark 3: Route Params + Body Parsing",
     "══════════════════════════════════════════════════",
@@ -127,9 +127,9 @@
     "\n  --- Fastify ---",
     "\n  --- Express ---",
     "\n  Results:",
-    "    roachjs    19,050 req/sec  (avg 0.02ms, p99 1ms)",
-    "    fastify    11,296 req/sec  (avg 0.04ms, p99 1ms)",
-    "    express    4,646 req/sec  (avg 1.99ms, p99 4ms)",
+    "    roachjs    18,718 req/sec  (avg 0.02ms, p99 1ms)",
+    "    fastify    11,169 req/sec  (avg 0.05ms, p99 1ms)",
+    "    express    4,594 req/sec  (avg 2.02ms, p99 4ms)",
     "\n══════════════════════════════════════════════════",
     "  Benchmark 4: Middleware Chain",
     "══════════════════════════════════════════════════",
@@ -137,15 +137,15 @@
     "\n  --- Fastify ---",
     "\n  --- Express ---",
     "\n  Results:",
-    "    roachjs    27,139 req/sec  (avg 0.02ms, p99 0ms)",
-    "    fastify    13,995 req/sec  (avg 0.02ms, p99 1ms)",
-    "    express    6,004 req/sec  (avg 1.07ms, p99 3ms)",
+    "    roachjs    27,199 req/sec  (avg 0.02ms, p99 0ms)",
+    "    fastify    13,777 req/sec  (avg 0.02ms, p99 1ms)",
+    "    express    6,008 req/sec  (avg 1.07ms, p99 3ms)",
     "\n══════════════════════════════════════════════════",
     "  SUMMARY",
     "══════════════════════════════════════════════════",
-    "  Hello World      RoachJS:   27,565 | 1.7x Fastify | 4.5x Express",
-    "  JSON Response    RoachJS:   25,876 | 1.9x Fastify | 4.4x Express",
-    "  Params + Body    RoachJS:   19,050 | 1.7x Fastify | 4.1x Express",
-    "  Middleware       RoachJS:   27,139 | 1.9x Fastify | 4.5x Express"
+    "  Hello World      RoachJS:   28,463 | 1.8x Fastify | 4.6x Express",
+    "  JSON Response    RoachJS:   26,570 | 2.0x Fastify | 4.5x Express",
+    "  Params + Body    RoachJS:   18,718 | 1.7x Fastify | 4.1x Express",
+    "  Middleware       RoachJS:   27,199 | 2.0x Fastify | 4.5x Express"
   ]
 }
