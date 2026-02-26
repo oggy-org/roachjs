@@ -360,9 +360,9 @@ Duration: 10s | Connections: 10 | Pipelining: 1
   --- Express ---
 
   Results:
-    roachjs    28,463 req/sec  (avg 0.02ms, p99 0ms)
-    fastify    15,897 req/sec  (avg 0.03ms, p99 1ms)
-    express    6,152 req/sec  (avg 1.09ms, p99 3ms)
+    roachjs    28,645 req/sec  (avg 0.02ms, p99 1ms)
+    fastify    16,163 req/sec  (avg 0.02ms, p99 1ms)
+    express    6,144 req/sec  (avg 1.09ms, p99 3ms)
 
 ══════════════════════════════════════════════════
   Benchmark 2: JSON Response
@@ -375,9 +375,9 @@ Duration: 10s | Connections: 10 | Pipelining: 1
   --- Express ---
 
   Results:
-    roachjs    26,570 req/sec  (avg 0.02ms, p99 0ms)
-    fastify    13,445 req/sec  (avg 0.02ms, p99 1ms)
-    express    5,906 req/sec  (avg 1.07ms, p99 3ms)
+    roachjs    26,210 req/sec  (avg 0.02ms, p99 0ms)
+    fastify    13,661 req/sec  (avg 0.02ms, p99 1ms)
+    express    5,967 req/sec  (avg 1.06ms, p99 3ms)
 
 ══════════════════════════════════════════════════
   Benchmark 3: Route Params + Body Parsing
@@ -390,9 +390,9 @@ Duration: 10s | Connections: 10 | Pipelining: 1
   --- Express ---
 
   Results:
-    roachjs    18,718 req/sec  (avg 0.02ms, p99 1ms)
-    fastify    11,169 req/sec  (avg 0.05ms, p99 1ms)
-    express    4,594 req/sec  (avg 2.02ms, p99 4ms)
+    roachjs    18,958 req/sec  (avg 0.02ms, p99 1ms)
+    fastify    11,312 req/sec  (avg 0.04ms, p99 1ms)
+    express    4,629 req/sec  (avg 2.06ms, p99 4ms)
 
 ══════════════════════════════════════════════════
   Benchmark 4: Middleware Chain
@@ -405,17 +405,17 @@ Duration: 10s | Connections: 10 | Pipelining: 1
   --- Express ---
 
   Results:
-    roachjs    27,199 req/sec  (avg 0.02ms, p99 0ms)
-    fastify    13,777 req/sec  (avg 0.02ms, p99 1ms)
-    express    6,008 req/sec  (avg 1.07ms, p99 3ms)
+    roachjs    27,037 req/sec  (avg 0.02ms, p99 0ms)
+    fastify    13,856 req/sec  (avg 0.02ms, p99 1ms)
+    express    6,090 req/sec  (avg 1.05ms, p99 3ms)
 
 ══════════════════════════════════════════════════
   SUMMARY
 ══════════════════════════════════════════════════
-  Hello World      RoachJS:   28,463 | 1.8x Fastify | 4.6x Express
-  JSON Response    RoachJS:   26,570 | 2.0x Fastify | 4.5x Express
-  Params + Body    RoachJS:   18,718 | 1.7x Fastify | 4.1x Express
-  Middleware       RoachJS:   27,199 | 2.0x Fastify | 4.5x Express
+  Hello World      RoachJS:   28,645 | 1.8x Fastify | 4.7x Express
+  JSON Response    RoachJS:   26,210 | 1.9x Fastify | 4.4x Express
+  Params + Body    RoachJS:   18,958 | 1.7x Fastify | 4.1x Express
+  Middleware       RoachJS:   27,037 | 2.0x Fastify | 4.4x Express
 ```
 
 </details>
