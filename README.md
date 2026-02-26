@@ -305,6 +305,8 @@ npm install -D @oggy-org/roachjs-types
 
 ## Contributors
 
+- [jackson-peg](https://github.com/jackson-peg)
+
 <a href="https://github.com/oggy-org/roachjs/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=oggy-org/roachjs" />
 </a>
