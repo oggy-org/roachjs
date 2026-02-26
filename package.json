@@ -8,7 +8,7 @@
     ".": "./src/index.js"
   },
   "scripts": {
-    "test": "node --test test/",
+    "test": "node --test",
     "benchmark": "node benchmarks/run.js",
     "benchmark:compare": "node benchmarks/compare.js",
     "benchmark:svg": "node benchmarks/generate-svg.js"
