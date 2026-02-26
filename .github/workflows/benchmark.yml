@@ -46,10 +46,13 @@ jobs:
       - name: Generate benchmark SVGs
         run: npm run benchmark:svg
 
-      - name: Commit and push updated SVGs
+      - name: Update README with benchmark results
+        run: npm run benchmark:readme
+
+      - name: Commit and push updated assets
         run: |
           git config user.name "Roach Manager"
           git config user.email "roach-manager@oggy-org.github.io"
-          git add assets/benchmark-*.svg benchmarks/results.json
-          git diff --cached --quiet || git commit -m "chore: update benchmark SVGs [skip ci]"
+          git add assets/benchmark-*.svg benchmarks/results.json README.md
+          git diff --cached --quiet || git commit -m "chore: update benchmark results and docs [skip ci]"
           git push origin main
