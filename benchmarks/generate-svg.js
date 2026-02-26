@@ -1,13 +1,7 @@
 /**
  * @module benchmarks/generate-svg
  * @description Generate 4 dark-themed benchmark SVG charts for the RoachJS README.
- * Reads results from benchmarks/results.json and produces:
- * - assets/benchmark-hello-world.svg
- * - assets/benchmark-json.svg
- * - assets/benchmark-params-body.svg
- * - assets/benchmark-middleware.svg
- *
- * Each SVG is a horizontal bar chart matching the warm, dark RoachJS aesthetic.
+ * Reads results from benchmarks/results.json and produces themed charts.
  *
  * Usage: node benchmarks/generate-svg.js
  */
@@ -23,8 +17,6 @@ const assetsDir = join(rootDir, 'assets')
 
 /**
  * @description Format a number with commas for display inside SVG.
- * @param {number} num - Number to format
- * @returns {string} Formatted string
  */
 function formatNumber(num) {
     return Math.round(num).toLocaleString('en-US')
@@ -32,14 +24,6 @@ function formatNumber(num) {
 
 /**
  * @description Generate a single benchmark SVG chart.
- *
- * @param {string} title - Chart title (e.g., "Hello World")
- * @param {string} subtitle - Chart subtitle (e.g., "Plain text response — raw HTTP throughput")
- * @param {object} data - Object with roachjs, fastify, express results
- * @returns {string} Complete SVG markup
- *
- * @example
- * const svg = generateChart('Hello World', 'Plain text', { roachjs: {...}, fastify: {...}, express: {...} })
  */
 function generateChart(title, subtitle, data) {
     const width = 820
@@ -78,6 +62,10 @@ function generateChart(title, subtitle, data) {
           font-size="13" font-weight="${fw.glow ? 'bold' : 'normal'}">${formatNumber(fw.value)} req/sec</text>`
     }
 
+    const systemInfo = data.system
+        ? `${data.system.cpu} · ${data.system.ram} RAM · ${data.system.node}`
+        : 'auto-generated — run npm run benchmark to update'
+
     return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
   <defs>
     <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
@@ -104,39 +92,8 @@ function generateChart(title, subtitle, data) {
   ${bars}
 
   <text x="${width / 2}" y="${height - 12}" fill="#2a1f15" font-family="'SF Mono', 'Fira Code', monospace"
-        font-size="9" text-anchor="middle">auto-generated — run npm run benchmark to update</text>
+        font-size="9" text-anchor="middle">${systemInfo}</text>
 </svg>`
-}
-
-/**
- * @description Sample data used when no benchmark results exist yet.
- * @returns {object} Placeholder results matching the expected structure
- */
-function sampleData() {
-    return {
-        helloWorld: {
-            roachjs: { requestsPerSec: 540000 },
-            fastify: { requestsPerSec: 265000 },
-            express: { requestsPerSec: 52000 }
-        },
-        json: {
-            roachjs: { requestsPerSec: 480000 },
-            fastify: { requestsPerSec: 240000 },
-            express: { requestsPerSec: 45000 }
-        },
-        paramsBody: {
-            roachjs: { requestsPerSec: 320000 },
-            fastify: { requestsPerSec: 180000 },
-            express: { requestsPerSec: 28000 }
-        },
-        middleware: {
-            roachjs: { requestsPerSec: 420000 },
-            fastify: { requestsPerSec: 210000 },
-            express: { requestsPerSec: 38000 }
-        },
-        config: { duration: 10, connections: 10, pipelining: 1 },
-        timestamp: new Date().toISOString()
-    }
 }
 
 function main() {
@@ -146,8 +103,8 @@ function main() {
         results = JSON.parse(readFileSync(resultsPath, 'utf-8'))
         console.log('Generating SVGs from benchmark results...')
     } else {
-        console.log('No benchmark results found. Generating SVGs with sample data...')
-        results = sampleData()
+        console.log('No results.json found. Please run npm run benchmark first.')
+        return
     }
 
     if (!existsSync(assetsDir)) {
@@ -159,25 +116,25 @@ function main() {
             file: 'benchmark-hello-world.svg',
             title: 'Hello World',
             subtitle: `Plain text response · ${results.config?.connections || 10} connections · ${results.config?.duration || 10}s`,
-            data: results.helloWorld
+            data: { ...results.helloWorld, system: results.system }
         },
         {
             file: 'benchmark-json.svg',
             title: 'JSON Response',
             subtitle: `JSON serialization · ${results.config?.connections || 10} connections · ${results.config?.duration || 10}s`,
-            data: results.json
+            data: { ...results.json, system: results.system }
         },
         {
             file: 'benchmark-params-body.svg',
             title: 'Route Params + Body Parsing',
             subtitle: `POST with URL param + JSON body · ${results.config?.connections || 10} connections · ${results.config?.duration || 10}s`,
-            data: results.paramsBody
+            data: { ...results.paramsBody, system: results.system }
         },
         {
             file: 'benchmark-middleware.svg',
             title: 'Middleware Chain',
             subtitle: `3 middleware functions · ${results.config?.connections || 10} connections · ${results.config?.duration || 10}s`,
-            data: results.middleware
+            data: { ...results.middleware, system: results.system }
         }
     ]
 

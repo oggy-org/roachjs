@@ -305,11 +305,8 @@ npm install -D @oggy-org/roachjs-types
 
 ## Contributors
 
-- [jackson-peg](https://github.com/jackson-peg)
-
-<a href="https://github.com/oggy-org/roachjs/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=oggy-org/roachjs" />
-</a>
+| [<img src="https://github.com/jackson-peg.png" width="100px;"/><br /><sub><b>jackson-peg</b></sub>](https://github.com/jackson-peg) |
+| :---: |
 
 ## Star History
 
@@ -321,26 +318,65 @@ npm install -D @oggy-org/roachjs-types
 
 Benchmarks are lies until proven otherwise. Here is exactly how we run ours so you can reproduce them yourself.
 
-### How We Benchmark
+### Benchmark Environment & Logs
 
+Benchmarks were executed on the following system configuration. You can view the full execution logs in the section below.
+
+<div align="center">
+
+| Component | Specification |
+| :--- | :--- |
+| **CPU** | AMD E2-7015 APU with AMD Radeon R2 Graphics |
+| **Cores** | 2 |
+| **RAM** | 3GB |
+| **OS** | Linux 6.17.0-14-generic (x64) |
+| **Node.js** | v20.12.0 (LTS) |
+
+</div>
+
+<details>
+<summary><b>View Benchmark Logs</b></summary>
+<br />
+
+```text
+╔══════════════════════════════════════════════╗
+║       RoachJS Benchmark Suite                ║
+╚══════════════════════════════════════════════╝
+
+System: AMD E2-7015 APU with AMD Radeon R2 Graphics (2 cores) | 3GB RAM
+OS:     Linux 6.17.0-14-generic (x64)
+Node:   v20.12.0
+
+Duration: 10s | Connections: 10 | Pipelining: 1
+
+Benchmark 1: Hello World
+RoachJS:   28,008 req/sec  (avg 0.03ms, p99 0ms)
+Fastify:   15,755 req/sec  (avg 0.03ms, p99 1ms)
+Express:    6,014 req/sec  (avg 1.1ms, p99 3ms)
+
+Benchmark 2: JSON Response
+RoachJS:   25,887 req/sec  (avg 0.02ms, p99 0ms)
+Fastify:   13,317 req/sec  (avg 0.02ms, p99 1ms)
+Express:    5,847 req/sec  (avg 1.07ms, p99 4ms)
+
+Benchmark 3: Route Params + Body Parsing
+RoachJS:   18,234 req/sec  (avg 0.03ms, p99 1ms)
+Fastify:   10,954 req/sec  (avg 0.05ms, p99 1ms)
+Express:    4,573 req/sec  (avg 2.05ms, p99 4ms)
+
+Benchmark 4: Middleware Chain
+RoachJS:   27,069 req/sec  (avg 0.02ms, p99 0ms)
+Fastify:   13,666 req/sec  (avg 0.02ms, p99 1ms)
+Express:    5,958 req/sec  (avg 1.07ms, p99 3ms)
+
+SUMMARY
+Hello World      RoachJS:    28,008 | 1.8x Fastify | 4.7x Express
+JSON Response    RoachJS:    25,887 | 1.9x Fastify | 4.4x Express
+Params + Body    RoachJS:    18,234 | 1.7x Fastify | 4.0x Express
+Middleware       RoachJS:    27,069 | 2.0x Fastify | 4.5x Express
 ```
-Machine:      Apple M2 Pro, 16GB RAM
-OS:           macOS Sonoma 14.x
-Node.js:      v20.x.x (LTS)
-Tool:         autocannon
-Duration:     10 seconds per test
-Pipelining:   1
-Connections:  10 concurrent
-```
 
-Frameworks tested:
-- **RoachJS** v0.0.1 (uWebSockets.js v20.44.0)
-- **Fastify** v4.x
-- **Express** v4.18.x
-
-All frameworks were tested with their recommended production configuration. No framework was deliberately handicapped. If you find a configuration that makes any of these numbers better or fairer, open an issue and we will rerun.
-
----
+</details>
 
 ### Hello World
 

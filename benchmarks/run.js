@@ -16,6 +16,7 @@
 import { writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
+import os from 'node:os'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -160,14 +161,44 @@ async function runScenario(name, setups, path, autocannonOpts = {}) {
     return results
 }
 
+/**
+ * @description Get system specifications.
+ * @returns {object} System info
+ */
+function getSystemInfo() {
+    return {
+        cpu: os.cpus()[0].model,
+        cores: os.cpus().length,
+        ram: `${Math.round(os.totalmem() / 1024 / 1024 / 1024)}GB`,
+        os: `${os.type()} ${os.release()} (${os.arch()})`,
+        node: process.version
+    }
+}
+
 async function main() {
+    const logs = []
+    const originalLog = console.log
+    console.log = (...args) => {
+        logs.push(args.join(' '))
+        originalLog(...args)
+    }
+
     console.log('╔══════════════════════════════════════════════╗')
     console.log('║       RoachJS Benchmark Suite                ║')
     console.log('╚══════════════════════════════════════════════╝')
+
+    const systemInfo = getSystemInfo()
+    console.log(`\nSystem: ${systemInfo.cpu} (${systemInfo.cores} cores) | ${systemInfo.ram} RAM`)
+    console.log(`OS:     ${systemInfo.os}`)
+    console.log(`Node:   ${systemInfo.node}`)
     console.log(`\nDuration: ${DURATION}s | Connections: ${CONNECTIONS} | Pipelining: ${PIPELINING}`)
 
-    const allResults = { config: { duration: DURATION, connections: CONNECTIONS, pipelining: PIPELINING } }
+    const allResults = {
+        config: { duration: DURATION, connections: CONNECTIONS, pipelining: PIPELINING },
+        system: systemInfo
+    }
 
+    // ... (rest of benchmarks remain same)
     // Benchmark 1: Hello World
     allResults.helloWorld = await runScenario('Benchmark 1: Hello World', {
         roach: (app) => {
@@ -276,11 +307,12 @@ async function main() {
     }
 
     allResults.timestamp = new Date().toISOString()
+    allResults.logs = logs
 
     const resultsPath = join(__dirname, 'results.json')
     writeFileSync(resultsPath, JSON.stringify(allResults, null, 2))
     console.log(`\nResults saved to ${resultsPath}`)
-    console.log('Run "npm run benchmark:svg" to generate SVG charts.')
+    console.log('Run "npm run benchmark:svg" to update charts.')
 }
 
 main().catch(console.error)
