@@ -29,23 +29,23 @@
           fill="#c8a070" filter="url(#barGlow)" opacity="1"/>
     <text x="674" y="103"
           fill="#e8d8c0" font-family="'SF Mono', 'Fira Code', monospace"
-          font-size="13" font-weight="bold">26,816 req/sec</text>
+          font-size="13" font-weight="bold">27,139 req/sec</text>
     <text x="116" y="157" fill="#7a6a5a"
           font-family="'Georgia', serif" font-size="15" text-anchor="end"
           font-weight="normal">Fastify</text>
-    <rect x="130" y="134" width="272.2661545346062" height="36" rx="3"
+    <rect x="130" y="134" width="273.2988260523523" height="36" rx="3"
           fill="#4a3020"  opacity="0.8"/>
-    <text x="416.2661545346062" y="157"
+    <text x="417.2988260523523" y="157"
           fill="#7a6a5a" font-family="'SF Mono', 'Fira Code', monospace"
-          font-size="13" font-weight="normal">13,776 req/sec</text>
+          font-size="13" font-weight="normal">13,995 req/sec</text>
     <text x="116" y="211" fill="#5a4a3a"
           font-family="'Georgia', serif" font-size="15" text-anchor="end"
           font-weight="normal">Express</text>
-    <rect x="130" y="188" width="120.73133576968975" height="36" rx="3"
+    <rect x="130" y="188" width="117.24828292654166" height="36" rx="3"
           fill="#1e1208"  opacity="0.8"/>
-    <text x="264.73133576968974" y="211"
+    <text x="261.24828292654166" y="211"
           fill="#5a4a3a" font-family="'SF Mono', 'Fira Code', monospace"
-          font-size="13" font-weight="normal">6,109 req/sec</text>
+          font-size="13" font-weight="normal">6,004 req/sec</text>
 
   <text x="410" y="248" fill="#2a1f15" font-family="'SF Mono', 'Fira Code', monospace"
         font-size="9" text-anchor="middle">AMD EPYC 7763 64-Core Processor · 16GB RAM · v20.20.0</text>
