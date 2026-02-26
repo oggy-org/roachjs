@@ -1,0 +1,33 @@
+# Tests
+test/
+
+# Benchmarks
+benchmarks/
+
+# CI/CD
+.github/
+
+# Scripts
+scripts/
+
+# Assets (not needed in npm package)
+assets/
+
+# Documentation
+CONTRIBUTING.md
+CHANGELOG.md
+
+# Editor config
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Dev files
+.git/
+node_modules/
+coverage/

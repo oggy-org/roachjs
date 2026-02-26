@@ -1,0 +1,88 @@
+{
+  "config": {
+    "duration": 10,
+    "connections": 10,
+    "pipelining": 1
+  },
+  "helloWorld": {
+    "roachjs": {
+      "requestsPerSec": 0,
+      "latencyAvg": 0,
+      "latencyP99": 0,
+      "throughput": 0
+    },
+    "fastify": {
+      "requestsPerSec": 797.5,
+      "latencyAvg": 12.08,
+      "latencyP99": 38,
+      "throughput": 140377.6
+    },
+    "express": {
+      "requestsPerSec": 903,
+      "latencyAvg": 10.56,
+      "latencyP99": 28,
+      "throughput": 214892.8
+    }
+  },
+  "json": {
+    "roachjs": {
+      "requestsPerSec": 0,
+      "latencyAvg": 0,
+      "latencyP99": 0,
+      "throughput": 0
+    },
+    "fastify": {
+      "requestsPerSec": 741,
+      "latencyAvg": 13.02,
+      "latencyP99": 45,
+      "throughput": 164489.6
+    },
+    "express": {
+      "requestsPerSec": 495.5,
+      "latencyAvg": 19.82,
+      "latencyP99": 63,
+      "throughput": 141712
+    }
+  },
+  "paramsBody": {
+    "roachjs": {
+      "requestsPerSec": 0,
+      "latencyAvg": 0,
+      "latencyP99": 0,
+      "throughput": 0
+    },
+    "fastify": {
+      "requestsPerSec": 1007.5,
+      "latencyAvg": 9.42,
+      "latencyP99": 30,
+      "throughput": 212563.2
+    },
+    "express": {
+      "requestsPerSec": 549.5,
+      "latencyAvg": 17.79,
+      "latencyP99": 65,
+      "throughput": 151126.4
+    }
+  },
+  "middleware": {
+    "roachjs": {
+      "requestsPerSec": 0,
+      "latencyAvg": 0,
+      "latencyP99": 0,
+      "throughput": 0
+    },
+    "fastify": {
+      "requestsPerSec": 1459,
+      "latencyAvg": 6.36,
+      "latencyP99": 28,
+      "throughput": 245132.8
+    },
+    "express": {
+      "requestsPerSec": 650.5,
+      "latencyAvg": 14.89,
+      "latencyP99": 61,
+      "throughput": 149632
+    }
+  },
+  "timestamp": "2026-02-26T12:06:35.015Z"
+}

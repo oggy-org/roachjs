@@ -1,0 +1,55 @@
+name: Benchmark
+
+on:
+  push:
+    branches: [main]
+    tags:
+      - 'v*.*.*'
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  benchmark:
+    name: Run Benchmarks & Update SVGs
+    runs-on: ubuntu-latest
+    if: >
+      (github.event_name == 'push') ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests first
+        run: npm test
+
+      - name: Run benchmarks
+        run: npm run benchmark
+
+      - name: Generate benchmark SVGs
+        run: npm run benchmark:svg
+
+      - name: Commit and push updated SVGs
+        run: |
+          git config user.name "Roach Manager"
+          git config user.email "roach-manager@oggy-org.github.io"
+          git add assets/benchmark-*.svg benchmarks/results.json
+          git diff --cached --quiet || git commit -m "chore: update benchmark SVGs [skip ci]"
+          git push origin main

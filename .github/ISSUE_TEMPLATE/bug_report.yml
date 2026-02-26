@@ -1,0 +1,88 @@
+name: 🪳 Bug Report
+description: Something broke? The roaches want to know.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. The roaches will investigate immediately.
+
+  - type: input
+    id: version
+    attributes:
+      label: RoachJS Version
+      description: What version of RoachJS are you using?
+      placeholder: "0.0.1"
+    validations:
+      required: true
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js Version
+      description: What version of Node.js are you running?
+      placeholder: "20.11.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - Linux
+        - macOS
+        - Windows
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: What happened? What did you expect to happen?
+      placeholder: "Describe the bug clearly..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Minimal code to reproduce the issue.
+      placeholder: |
+        1. Create a new RoachJS app
+        2. Add this route...
+        3. Start the server
+        4. Send this request...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Output / Logs
+      description: Paste any relevant error messages or logs.
+      render: shell
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I've searched existing issues and this isn't a duplicate
+          required: true
+        - label: I'm using the latest version of RoachJS
+          required: false
+        - label: I can reproduce this with a minimal example
+          required: false

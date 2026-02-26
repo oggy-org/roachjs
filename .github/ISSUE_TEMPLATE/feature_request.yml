@@ -1,0 +1,65 @@
+name: ✨ Feature Request
+description: Got an idea? The roaches are listening.
+title: "[Feature]: "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Got a feature idea? Sweet. The roaches love new tricks — as long as they don't make things slower.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem does this feature solve? Why do you need it?
+      placeholder: "I'm always frustrated when..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How should this work? Show us the API you'd want to use.
+      placeholder: |
+        ```js
+        app.get('/example', (req, res) => {
+          // How should the new feature work?
+        })
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any other approaches you considered?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Performance Impact
+      description: Would this feature affect performance?
+      options:
+        - No impact — it's additive and optional
+        - Minor impact — acceptable trade-off
+        - Could be significant — needs benchmarking
+        - Improves performance
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I've searched existing issues and feature requests
+          required: true
+        - label: This feature would benefit multiple users, not just my use case
+          required: false
+        - label: I'm willing to submit a PR for this feature
+          required: false

@@ -1,0 +1,48 @@
+{
+  "name": "@oggy-org/roachjs",
+  "version": "0.0.1",
+  "description": "The fastest, simplest HTTP framework for Node.js",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "node --test test/**/*.test.js",
+    "benchmark": "node benchmarks/run.js",
+    "benchmark:compare": "node benchmarks/compare.js",
+    "benchmark:svg": "node benchmarks/generate-svg.js"
+  },
+  "keywords": [
+    "http",
+    "framework",
+    "web",
+    "server",
+    "fast",
+    "roach",
+    "nodejs",
+    "performance",
+    "lightweight"
+  ],
+  "author": "oggy-org",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oggy-org/roachjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oggy-org/roachjs/issues"
+  },
+  "homepage": "https://github.com/oggy-org/roachjs#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.44.0"
+  },
+  "devDependencies": {
+    "autocannon": "^7.15.0",
+    "express": "^4.18.0",
+    "fastify": "^4.0.0"
+  }
+}
