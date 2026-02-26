@@ -25,10 +25,11 @@
     <text x="116" y="103" fill="#e8d8c0"
           font-family="'Georgia', serif" font-size="15" text-anchor="end"
           font-weight="bold">RoachJS</text>
-    <rect x="130" y="80" width="530" height="36" rx="3"
+    <rect x="130" y="80" width="6" height="36" rx="3"
           fill="#c8a070" filter="url(#barGlow)" opacity="1"/>
-    <text x="674" y="103"
+    <text x="150" y="103"
           fill="#e8d8c0" font-family="'SF Mono', 'Fira Code', monospace"
+<<<<<<< HEAD
           font-size="13" font-weight="bold">28,472 req/sec</text>
     <text x="116" y="157" fill="#7a6a5a"
           font-family="'Georgia', serif" font-size="15" text-anchor="end"
@@ -46,7 +47,26 @@
     <text x="258.4741921888171" y="211"
           fill="#5a4a3a" font-family="'SF Mono', 'Fira Code', monospace"
           font-size="13" font-weight="normal">6,150 req/sec</text>
+=======
+          font-size="13" font-weight="bold">0 req/sec</text>
+    <text x="116" y="157" fill="#7a6a5a"
+          font-family="'Georgia', serif" font-size="15" text-anchor="end"
+          font-weight="normal">Fastify</text>
+    <rect x="130" y="134" width="530" height="36" rx="3"
+          fill="#4a3020"  opacity="0.8"/>
+    <text x="674" y="157"
+          fill="#7a6a5a" font-family="'SF Mono', 'Fira Code', monospace"
+          font-size="13" font-weight="normal">707 req/sec</text>
+    <text x="116" y="211" fill="#5a4a3a"
+          font-family="'Georgia', serif" font-size="15" text-anchor="end"
+          font-weight="normal">Express</text>
+    <rect x="130" y="188" width="337.95470629865537" height="36" rx="3"
+          fill="#1e1208"  opacity="0.8"/>
+    <text x="481.95470629865537" y="211"
+          fill="#5a4a3a" font-family="'SF Mono', 'Fira Code', monospace"
+          font-size="13" font-weight="normal">451 req/sec</text>
+>>>>>>> 6a0cd96 (chore: update benchmark results and SVGs)
 
   <text x="410" y="248" fill="#2a1f15" font-family="'SF Mono', 'Fira Code', monospace"
-        font-size="9" text-anchor="middle">auto-generated — run npm run benchmark to update</text>
+        font-size="9" text-anchor="middle">AMD E2-7015 APU with AMD Radeon R2 Graphics · 3GB RAM · v24.13.0</text>
 </svg>
