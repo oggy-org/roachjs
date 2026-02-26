@@ -5,151 +5,147 @@
     "pipelining": 1
   },
   "system": {
-    "cpu": "AMD E2-7015 APU with AMD Radeon R2 Graphics",
-    "cores": 2,
-    "ram": "3GB",
-    "os": "Linux 6.17.0-14-generic (x64)",
-    "node": "v24.13.0"
+    "cpu": "AMD EPYC 7763 64-Core Processor",
+    "cores": 4,
+    "ram": "16GB",
+    "os": "Linux 6.14.0-1017-azure (x64)",
+    "node": "v20.20.0"
   },
   "helloWorld": {
     "roachjs": {
-      "requestsPerSec": 41296,
-      "latencyAvg": 0.02,
+      "requestsPerSec": 26985.46,
+      "latencyAvg": 0.03,
       "latencyP99": 0,
-      "throughput": 5988761.6
+      "throughput": 3913076.37
     },
     "fastify": {
-      "requestsPerSec": 27379.64,
-      "latencyAvg": 0.01,
-      "latencyP99": 0,
-      "throughput": 4818664.73
+      "requestsPerSec": 15612.73,
+      "latencyAvg": 0.03,
+      "latencyP99": 1,
+      "throughput": 2747764.37
     },
     "express": {
-      "requestsPerSec": 8646.37,
-      "latencyAvg": 1.06,
+      "requestsPerSec": 6043.2,
+      "latencyAvg": 1.09,
       "latencyP99": 3,
-      "throughput": 2057495.28
+      "throughput": 1438208
     }
   },
   "json": {
     "roachjs": {
-      "requestsPerSec": 37778.91,
+      "requestsPerSec": 25747.2,
       "latencyAvg": 0.02,
       "latencyP99": 0,
-      "throughput": 7215476.37
+      "throughput": 4917248
     },
     "fastify": {
-      "requestsPerSec": 23514.91,
-      "latencyAvg": 0.01,
-      "latencyP99": 0,
-      "throughput": 5220352
+      "requestsPerSec": 13693.46,
+      "latencyAvg": 0.02,
+      "latencyP99": 1,
+      "throughput": 3040069.82
     },
     "express": {
-      "requestsPerSec": 8503.64,
-      "latencyAvg": 1.05,
+      "requestsPerSec": 5962.8,
+      "latencyAvg": 1.07,
       "latencyP99": 3,
-      "throughput": 2431813.82
+      "throughput": 1705164.8
     }
   },
   "paramsBody": {
     "roachjs": {
-      "requestsPerSec": 28472,
-      "latencyAvg": 0.02,
-      "latencyP99": 0,
-      "throughput": 8881989.82
-    },
-    "fastify": {
-      "requestsPerSec": 18604.37,
+      "requestsPerSec": 18642.19,
       "latencyAvg": 0.02,
       "latencyP99": 1,
-      "throughput": 3925736.73
+      "throughput": 5816133.82
+    },
+    "fastify": {
+      "requestsPerSec": 11353.82,
+      "latencyAvg": 0.04,
+      "latencyP99": 1,
+      "throughput": 2395508.37
     },
     "express": {
-      "requestsPerSec": 6149.64,
-      "latencyAvg": 1.11,
-      "latencyP99": 3,
-      "throughput": 1691042.91
+      "requestsPerSec": 4652.19,
+      "latencyAvg": 2,
+      "latencyP99": 4,
+      "throughput": 1279208.73
     }
   },
   "middleware": {
     "roachjs": {
-      "requestsPerSec": 39361.46,
+      "requestsPerSec": 26816,
       "latencyAvg": 0.02,
       "latencyP99": 0,
-      "throughput": 5393128.73
+      "throughput": 3674112
     },
     "fastify": {
-      "requestsPerSec": 24066.19,
-      "latencyAvg": 0.01,
-      "latencyP99": 0,
-      "throughput": 4042845.1
+      "requestsPerSec": 13775.64,
+      "latencyAvg": 0.02,
+      "latencyP99": 1,
+      "throughput": 2314519.28
     },
     "express": {
-      "requestsPerSec": 8591.64,
-      "latencyAvg": 1.05,
+      "requestsPerSec": 6108.55,
+      "latencyAvg": 1.06,
       "latencyP99": 3,
-      "throughput": 1976087.28
+      "throughput": 1404974.55
     }
   },
-  "timestamp": "2026-02-26T12:33:09.993Z",
+  "timestamp": "2026-02-26T12:46:16.132Z",
   "logs": [
     "╔══════════════════════════════════════════════╗",
     "║       RoachJS Benchmark Suite                ║",
     "╚══════════════════════════════════════════════╝",
-    "\nSystem: AMD E2-7015 APU with AMD Radeon R2 Graphics (2 cores) | 3GB RAM",
-    "OS:     Linux 6.17.0-14-generic (x64)",
-    "Node:   v24.13.0",
+    "\nSystem: AMD EPYC 7763 64-Core Processor (4 cores) | 16GB RAM",
+    "OS:     Linux 6.14.0-1017-azure (x64)",
+    "Node:   v20.20.0",
     "\nDuration: 10s | Connections: 10 | Pipelining: 1",
     "\n══════════════════════════════════════════════════",
     "  Benchmark 1: Hello World",
     "══════════════════════════════════════════════════",
     "\n  --- RoachJS ---",
-    "  RoachJS skipped: This version of uWS.js supports only Node.js LTS versions 16, 18 and 20 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).\n\nError: Cannot find module './uws_linux_x64_137.node'\nRequire stack:\n- /home/ramkrishna0/Desktop/oggy-dev/roachjs/node_modules/uWebSockets.js/uws.js",
     "\n  --- Fastify ---",
     "\n  --- Express ---",
     "\n  Results:",
-    "    roachjs    0 req/sec  (avg 0ms, p99 0ms)",
-    "    fastify    1,026 req/sec  (avg 9.32ms, p99 86ms)",
-    "    express    817 req/sec  (avg 11.75ms, p99 35ms)",
+    "    roachjs    26,985 req/sec  (avg 0.03ms, p99 0ms)",
+    "    fastify    15,613 req/sec  (avg 0.03ms, p99 1ms)",
+    "    express    6,043 req/sec  (avg 1.09ms, p99 3ms)",
     "\n══════════════════════════════════════════════════",
     "  Benchmark 2: JSON Response",
     "══════════════════════════════════════════════════",
     "\n  --- RoachJS ---",
-    "  RoachJS skipped: This version of uWS.js supports only Node.js LTS versions 16, 18 and 20 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).\n\nError: Cannot find module './uws_linux_x64_137.node'\nRequire stack:\n- /home/ramkrishna0/Desktop/oggy-dev/roachjs/node_modules/uWebSockets.js/uws.js",
     "\n  --- Fastify ---",
     "\n  --- Express ---",
     "\n  Results:",
-    "    roachjs    0 req/sec  (avg 0ms, p99 0ms)",
-    "    fastify    553 req/sec  (avg 17.58ms, p99 94ms)",
-    "    express    682 req/sec  (avg 14.19ms, p99 79ms)",
+    "    roachjs    25,747 req/sec  (avg 0.02ms, p99 0ms)",
+    "    fastify    13,693 req/sec  (avg 0.02ms, p99 1ms)",
+    "    express    5,963 req/sec  (avg 1.07ms, p99 3ms)",
     "\n══════════════════════════════════════════════════",
     "  Benchmark 3: Route Params + Body Parsing",
     "══════════════════════════════════════════════════",
     "\n  --- RoachJS ---",
-    "  RoachJS skipped: This version of uWS.js supports only Node.js LTS versions 16, 18 and 20 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).\n\nError: Cannot find module './uws_linux_x64_137.node'\nRequire stack:\n- /home/ramkrishna0/Desktop/oggy-dev/roachjs/node_modules/uWebSockets.js/uws.js",
     "\n  --- Fastify ---",
     "\n  --- Express ---",
     "\n  Results:",
-    "    roachjs    0 req/sec  (avg 0ms, p99 0ms)",
-    "    fastify    707 req/sec  (avg 13.73ms, p99 55ms)",
-    "    express    451 req/sec  (avg 22.31ms, p99 101ms)",
+    "    roachjs    18,642 req/sec  (avg 0.02ms, p99 1ms)",
+    "    fastify    11,354 req/sec  (avg 0.04ms, p99 1ms)",
+    "    express    4,652 req/sec  (avg 2ms, p99 4ms)",
     "\n══════════════════════════════════════════════════",
     "  Benchmark 4: Middleware Chain",
     "══════════════════════════════════════════════════",
     "\n  --- RoachJS ---",
-    "  RoachJS skipped: This version of uWS.js supports only Node.js LTS versions 16, 18 and 20 on (glibc) Linux, macOS and Windows, on Tier 1 platforms (https://github.com/nodejs/node/blob/master/BUILDING.md#platform-list).\n\nError: Cannot find module './uws_linux_x64_137.node'\nRequire stack:\n- /home/ramkrishna0/Desktop/oggy-dev/roachjs/node_modules/uWebSockets.js/uws.js",
     "\n  --- Fastify ---",
     "\n  --- Express ---",
     "\n  Results:",
-    "    roachjs    0 req/sec  (avg 0ms, p99 0ms)",
-    "    fastify    616 req/sec  (avg 15.76ms, p99 54ms)",
-    "    express    647 req/sec  (avg 14.98ms, p99 60ms)",
+    "    roachjs    26,816 req/sec  (avg 0.02ms, p99 0ms)",
+    "    fastify    13,776 req/sec  (avg 0.02ms, p99 1ms)",
+    "    express    6,109 req/sec  (avg 1.06ms, p99 3ms)",
     "\n══════════════════════════════════════════════════",
     "  SUMMARY",
     "══════════════════════════════════════════════════",
-    "  Hello World      RoachJS:        0 | 0.0x Fastify | 0.0x Express",
-    "  JSON Response    RoachJS:        0 | 0.0x Fastify | 0.0x Express",
-    "  Params + Body    RoachJS:        0 | 0.0x Fastify | 0.0x Express",
-    "  Middleware       RoachJS:        0 | 0.0x Fastify | 0.0x Express"
+    "  Hello World      RoachJS:   26,985 | 1.7x Fastify | 4.5x Express",
+    "  JSON Response    RoachJS:   25,747 | 1.9x Fastify | 4.3x Express",
+    "  Params + Body    RoachJS:   18,642 | 1.6x Fastify | 4.0x Express",
+    "  Middleware       RoachJS:   26,816 | 1.9x Fastify | 4.4x Express"
   ]
 }
