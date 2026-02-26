@@ -29,23 +29,23 @@
           fill="#c8a070" filter="url(#barGlow)" opacity="1"/>
     <text x="674" y="103"
           fill="#e8d8c0" font-family="'SF Mono', 'Fira Code', monospace"
-          font-size="13" font-weight="bold">27,180 req/sec</text>
+          font-size="13" font-weight="bold">27,070 req/sec</text>
     <text x="116" y="157" fill="#7a6a5a"
           font-family="'Georgia', serif" font-size="15" text-anchor="end"
           font-weight="normal">Fastify</text>
-    <rect x="130" y="134" width="267.68730521328445" height="36" rx="3"
+    <rect x="130" y="134" width="267.57737953189195" height="36" rx="3"
           fill="#4a3020"  opacity="0.8"/>
-    <text x="411.68730521328445" y="157"
+    <text x="411.57737953189195" y="157"
           fill="#7a6a5a" font-family="'SF Mono', 'Fira Code', monospace"
-          font-size="13" font-weight="normal">13,728 req/sec</text>
+          font-size="13" font-weight="normal">13,667 req/sec</text>
     <text x="116" y="211" fill="#5a4a3a"
           font-family="'Georgia', serif" font-size="15" text-anchor="end"
           font-weight="normal">Express</text>
-    <rect x="130" y="188" width="119.42972078746537" height="36" rx="3"
+    <rect x="130" y="188" width="116.65892495775738" height="36" rx="3"
           fill="#1e1208"  opacity="0.8"/>
-    <text x="263.4297207874654" y="211"
+    <text x="260.6589249577574" y="211"
           fill="#5a4a3a" font-family="'SF Mono', 'Fira Code', monospace"
-          font-size="13" font-weight="normal">6,125 req/sec</text>
+          font-size="13" font-weight="normal">5,958 req/sec</text>
 
   <text x="410" y="248" fill="#2a1f15" font-family="'SF Mono', 'Fira Code', monospace"
         font-size="9" text-anchor="middle">auto-generated — run npm run benchmark to update</text>

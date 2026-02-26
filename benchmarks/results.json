@@ -6,83 +6,83 @@
   },
   "helloWorld": {
     "roachjs": {
-      "requestsPerSec": 28432,
-      "latencyAvg": 0.02,
+      "requestsPerSec": 28008,
+      "latencyAvg": 0.03,
       "latencyP99": 0,
-      "throughput": 4122419.2
+      "throughput": 4060718.55
     },
     "fastify": {
-      "requestsPerSec": 15975.64,
+      "requestsPerSec": 15755.28,
       "latencyAvg": 0.03,
       "latencyP99": 1,
-      "throughput": 2811438.55
+      "throughput": 2772712.73
     },
     "express": {
-      "requestsPerSec": 6162.73,
-      "latencyAvg": 1.08,
+      "requestsPerSec": 6014.8,
+      "latencyAvg": 1.1,
       "latencyP99": 3,
-      "throughput": 1466600.73
+      "throughput": 1431552
     }
   },
   "json": {
     "roachjs": {
-      "requestsPerSec": 25979.2,
+      "requestsPerSec": 25887.28,
       "latencyAvg": 0.02,
       "latencyP99": 0,
-      "throughput": 4961484.8
+      "throughput": 4944058.19
     },
     "fastify": {
-      "requestsPerSec": 13691.28,
+      "requestsPerSec": 13317.6,
       "latencyAvg": 0.02,
       "latencyP99": 1,
-      "throughput": 3039325.1
+      "throughput": 2956492.8
     },
     "express": {
-      "requestsPerSec": 5972.19,
-      "latencyAvg": 1.06,
-      "latencyP99": 3,
-      "throughput": 1707985.46
+      "requestsPerSec": 5847.1,
+      "latencyAvg": 1.07,
+      "latencyP99": 4,
+      "throughput": 1672238.55
     }
   },
   "paramsBody": {
     "roachjs": {
-      "requestsPerSec": 18816.73,
-      "latencyAvg": 0.02,
+      "requestsPerSec": 18234.91,
+      "latencyAvg": 0.03,
       "latencyP99": 1,
-      "throughput": 5870126.55
+      "throughput": 5688785.46
     },
     "fastify": {
-      "requestsPerSec": 11042.55,
+      "requestsPerSec": 10954.55,
       "latencyAvg": 0.05,
       "latencyP99": 1,
-      "throughput": 2329739.64
+      "throughput": 2311307.64
     },
     "express": {
-      "requestsPerSec": 4650.73,
-      "latencyAvg": 1.96,
+      "requestsPerSec": 4573.11,
+      "latencyAvg": 2.05,
       "latencyP99": 4,
-      "throughput": 1278836.37
+      "throughput": 1257369.61
     }
   },
   "middleware": {
     "roachjs": {
-      "requestsPerSec": 27180.37,
+      "requestsPerSec": 27069.82,
       "latencyAvg": 0.02,
       "latencyP99": 0,
-      "throughput": 3723543.28
+      "throughput": 3708462.55
     },
     "fastify": {
-      "requestsPerSec": 13728,
+      "requestsPerSec": 13666.55,
       "latencyAvg": 0.02,
       "latencyP99": 1,
-      "throughput": 2306457.6
+      "throughput": 2296273.46
     },
     "express": {
-      "requestsPerSec": 6124.8,
-      "latencyAvg": 1.06,
+      "requestsPerSec": 5958.37,
+      "latencyAvg": 1.07,
       "latencyP99": 3,
-      "throughput": 1408512
+      "throughput": 1370158.55
     }
   },
-  "timestamp": "2026-02-26T12:24:16.762Z"
+  "timestamp": "2026-02-26T12:27:24.466Z"
 }
